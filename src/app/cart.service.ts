@@ -22,4 +22,10 @@ export class CartService {
     this.items = [];
     return this.items;
   }
+  getTotal() {
+    for (let p of this.items) {
+      this.total += p.price;
+    }
+    return this.total;
+  }
 }
