@@ -1,0 +1,7 @@
+<div class="container text-center mt-5" *ngIf="products">
+  <h2>{{ products.product }}</h2>
+
+  <p class="description">{{ products.description }}</p>
+  <p>Price: {{ products.price | currency }}</p>
+  <button (click)="addToCart()">Buy</button>
+</div>

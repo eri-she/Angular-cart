@@ -1,0 +1,9 @@
+<div class="container text-center">
+  <h1 class="mb-5">Our products:</h1>
+  <div *ngFor="let p of products; index as productId">
+    <a routerLink="/products/{{ productId }}">
+      <h2>{{ p.product }}</h2>
+    </a>
+    <p class="description">{{ p.description }}</p>
+  </div>
+</div>
