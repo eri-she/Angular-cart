@@ -8,7 +8,7 @@ import { Iproducts } from './products/Iproducts';
 })
 export class CartService {
   items: Iproducts[] = [];
-  total: number = 0;
+
   constructor() {}
   addToCart(product: Iproducts) {
     this.items.push(product);
@@ -23,10 +23,10 @@ export class CartService {
     return this.items;
   }
   getTotal() {
-    this.total = 0;
+    let total: number = 0;
     for (let p of this.items) {
-      this.total += p.price;
+      total += p.price;
     }
-    return this.total;
+    return total;
   }
 }
